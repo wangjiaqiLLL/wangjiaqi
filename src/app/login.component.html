@@ -1,0 +1,45 @@
+<div class="login-body">
+  <div class="wrap">
+
+    <!-- Logo模块 -->
+    <div class="login-logo">
+      <p class="logo-p1">Easy Solar</p>
+      <p class="logo-p2"><i>智慧光伏云平台</i></p>
+      <p class="logo-p3">ZHI HUIGUANG VOLT CLOUD PLATFORM</p>
+    </div>
+
+    <!-- 表单模块 -->
+    <div class="form-body">
+      <form (submit)="login(username1.value, password1.value); $event.preventDefault()">
+        <div class="form-user">
+          <div class="title"><label for="username">用户名 |</label></div>
+          <div class="content"><input type="text" name="name" #username1 id="username1" placeholder="用户名" required /></div>
+        </div>
+        <div class="form-password">
+          <div class="title"><label for="password">密 &nbsp;&nbsp;码 |</label></div>
+          <div class="content"><input name="password" #password1 id="password1" placeholder="密码" required /></div>
+          <div class="eye" (click)="isPasswordVisiable = !isPasswordVisiable"><img src="./../assets/login/login-eye1.png" /></div>
+        </div>
+        <div class="form-tip">
+          <input type="checkbox" id="checkbox" name="checkbox" />
+          <span><label for="checkbox">在此计算机上保留我的信息</label></span>
+        </div>
+        <div class="form-button">
+          <button type="submit" pButton label="登录">登录</button>
+        </div>
+
+      </form>
+    </div>
+    <div class="clear"></div>
+    <div echarts [options]="chartOption" class="demo-chart" style="width: 600px;height:400px;" id="main"></div>
+    <!-- 页面底部模块 -->
+    <div class="footer">
+      <span>公司地址：江苏省启东经济开发区林洋路666号</span>&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>公司网址：www.linyang.com</span>&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>版权所有：@2015 林洋能源</span>&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>二维码 </span>&nbsp;&nbsp;
+      <img src="./../assets/login/login-erweima.jpg" />
+    </div>
+
+  </div>
+</div>
